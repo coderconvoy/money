@@ -1,6 +1,9 @@
 package money
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func Test_Amount(t *testing.T) {
 	tr := []struct {
@@ -25,5 +28,13 @@ func Test_Amount(t *testing.T) {
 			t.Fail()
 		}
 
+	}
+}
+
+func Test_print(t *testing.T) {
+	s := fmt.Sprintf("%s", M(35))
+	if s != "£0.35" {
+		t.Log("not right print : " + s)
+		t.Fail()
 	}
 }
