@@ -52,7 +52,7 @@ func SParse(s string, def int) M {
 
 func (m M) String() string {
 	if m < 0 {
-		return "-£" + fmt.Sprintf("%.2f", float32(-m)/100)
+		return "-" + fmt.Sprintf("%.2f", float32(-m)/100)
 	}
-	return "£" + fmt.Sprintf("%.2f", float32(m)/100)
+	return "" + fmt.Sprintf("%.2f", float32(m)/100)
 }
